@@ -3,23 +3,15 @@ from flask import Flask
 from flask_restful import Resource, Api
 from flask_rest_service import app, api
 
-class Root(Resource):
-    def get(self):
-        return {
-            'status': 'OK',
-            'hello': 'world'
-        }
+from websites import jokesdotcc
 
 class Blond(Resource):
     def get(self):
-        return {
-            'status': 'OK',
-            'blond': 'dumb'
-        }
+        joke = jokesdotcc.getJoke('blonde')
+        return { "joke"  : joke }
+#Create REST Resources here
 
-''' Add REST Resources here '''
+
 
 # finally add these resources like so
-
-api.add_resource(Root, '/')
 api.add_resource(Blond, '/blond')
