@@ -8,8 +8,8 @@ api = Api(app)
 
 @api.representation('application/json')
 def output_json(data, code, headers=None):
-    resp = make_response(json.dumps(data), code)
+    resp = make_response(json.dumps(data, indent=4), code)
     resp.headers.extend(headers or {})
     return resp
 
-import flask_rest_service.resources
+import rest_service.resources

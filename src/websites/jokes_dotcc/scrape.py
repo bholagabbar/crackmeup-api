@@ -5,7 +5,7 @@ import os
 
 from bs4 import BeautifulSoup
 
-dataFile = open(os.getcwd()+'\\websites\\jokescc-data.txt')
+dataFile = open(os.getcwd()+'\\src\\websites\\jokes_dotcc\\jokescc-data.txt')
 dataDic = dict(json.loads(dataFile.read()))
 
 def getJoke(category):
@@ -18,7 +18,10 @@ def getJoke(category):
 	handle = urllib.urlopen(parsedJokeLink)
 	htmlGunk =  handle.read()
 	soup = BeautifulSoup(htmlGunk, "html.parser")
-	jokeData = soup.findAll('div', {'class':'content_wrap'})[0].get_text()
-	if 'Next' in jokeData:
-		jokeData = jokeData[jokeData.index('Next')+5:]
-	return jokeData.rstrip()
+	joke = soup.findAll('div', {'class':'content_wrap'})[0].get_text()
+	if 'Next' in joke:
+		joke = joke[joke.index('Next')+5:]
+	joke = joke.replace("\n", " ")
+	joke = joke.replace("\t", " ")
+	joke = joke.strip()
+	return joke
