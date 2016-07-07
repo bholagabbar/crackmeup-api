@@ -8,6 +8,10 @@ from rest_service import app, api
 from src import DRIVER
 
 #Create REST Resources here
+class Root(Resource):
+    def get(self):
+        return {"Welcome to the"  : "crackmeup API", "For instructions on querying a joke, visit:" : "https://github.com/bholagabbar/crackmeup-api" }
+
 class Blond(Resource):
     def get(self):
         joke = DRIVER.trigger('Blond')
@@ -50,6 +54,7 @@ class Random(Resource):
 
 
 # finally add these resources like so
+api.add_resource(Root, '/')
 api.add_resource(Blond, '/blond')
 api.add_resource(Dark, '/dark')
 api.add_resource(Dirty, '/dirty')
