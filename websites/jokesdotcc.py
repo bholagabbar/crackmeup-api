@@ -1,10 +1,11 @@
 import json
 import random
 import urllib
+import os
 
 from bs4 import BeautifulSoup
 
-dataFile = open('C:/Users/bholagabbar/Desktop/crackmeup-api/websites/jokescc-data.txt') #change to complete path! Idk w
+dataFile = open(os.getcwd()+'\\websites\\jokescc-data.txt')
 dataDic = dict(json.loads(dataFile.read()))
 
 def getJoke(category):
