@@ -1,0 +1,1 @@
+web: gunicorn rest_service:app
