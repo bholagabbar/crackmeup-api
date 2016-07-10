@@ -47,6 +47,11 @@ class YoMama(Resource):
         joke = DRIVER.trigger('Yo mama')
         return {"category" : "Yo mama", "joke"  : joke }
 
+class ChuckNorris(Resource):
+    def get(self):
+        joke = DRIVER.trigger('Chuck norris')
+        return {"category" : "Chuck norris", "joke"  : joke }
+
 class Random(Resource):
     def get(self):
         joke = DRIVER.trigger('Random')
@@ -63,3 +68,4 @@ api.add_resource(Gender, '/gender')
 api.add_resource(WalksIntoABar, '/walks-into-a-bar')
 api.add_resource(YoMama, '/yo-mama')
 api.add_resource(Random, '/random')
+api.add_resource(ChuckNorris, '/chuck-norris')
