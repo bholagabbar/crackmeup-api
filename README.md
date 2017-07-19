@@ -4,7 +4,7 @@ An API to fetch a random joke based on certain categories. The API is built in P
 Jokes scraped using [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) from [jokes.cc.com](http://jokes.cc.com), [randomjokes.com](http://randomjokes.com) and [jokesyou.com](http://jokesyou.com). 
 
 
-####Using the API Category wise: 
+#### Using the API Category wise: 
 
   * *Random:* [https://crackmeup-api.herokuapp.com/random](https://crackmeup-api.herokuapp.com/random)
 
