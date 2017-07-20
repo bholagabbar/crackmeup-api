@@ -1,7 +1,7 @@
 # crackmeup-api
 An API to fetch a random joke based on certain categories. The API is built in Python using the [Flask](http://flask.pocoo.org/) Framework and [Flask-RESTful](http://flask-restful-cn.readthedocs.io/en/0.3.5/index.html) extension.
 
-Jokes scraped using [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) from [jokes.cc.com](http://jokes.cc.com), [randomjoke.com](http://randomjokes.com) and [jokesyou.com](http://jokesyou.com). 
+Jokes scraped using [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) from [jokes.cc.com](http://jokes.cc.com), [randomjoke.com](http://randomjoke.com) and [jokesyou.com](http://jokesyou.com). 
 
 
 #### Using the API Category wise: 
